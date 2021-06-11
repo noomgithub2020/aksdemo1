@@ -14,12 +14,12 @@ trigger:
 variables:
  tag: '$(Build.BuildId)'
 
-stage:
+stages:
 #build stages:
   - stage: Build
     displayName: Build Stage
     jobs:
-    - jobe: Build
+    - job: Build
       displayName: Build Job
       pool:
         vmImage: 'ubuntu-latest'
